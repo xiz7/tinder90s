@@ -1,0 +1,87 @@
+<html>
+      <head><link rel="stylesheet" href="/Users/tusm/Desktop/html/pr1.css">
+        <title>
+      REDNIT 09
+        </title>
+        <h1 align="left" style="color:black"><strong>
+          <br>
+        <i>&nbsp;&nbsp;&nbsp;90's Tinder</i></strong>
+      
+        </h1>
+<audio controls>
+  <source src="love.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
+
+<body onLoad=setTimeout("abc.style.display='none'",5000)  align="center" bgcolor="mediumturquoise"  topmargin="0" leftmargin="0">
+<div id="abc" style="padding:20px;
+position:absolute; background: pink;left:500px; top:38px;
+width:200px; height:60px; z-index:1">
+          <marquee width="200" behavior=alternate direction="left" scrollamount="5">MATCHING..
+          <br>
+          <br>
+          PLEASE WAIT..
+          </marquee>
+</div>
+
+
+ <script>
+      var sw = 1;
+      var photos = [ "photos/female18/1.jpg","photos/female18/2.jpg", "photos/female18/3.jpg","photos/female18/4.jpg","photos/female18/5.jpg","photos/female18/6.jpg","photos/male18/7.jpg","photos/female18/8.jpg","photos/female18/9.jpg"];
+      var gifs = ["photos/gif1.gif","photos/gif2.gif","photos/gif3.gif","photos/gif4.gif","photos/gif1.gif","photos/gif1.gif","photos/gif1.gif","photos/gif1.gif","photos/gif1.gif"];
+      var names = ["Chen Nuo", "Alex Chen", "Ha Ha","GUA","Chen Nuo","Chen Nuo","Chen Nuo","Chen Nuo","Chen Nuo"]
+      var ages =["19","18","25","20","24","24","24","24","24"]
+      function photo() {
+        var pic;
+        var gif;
+        var name;
+        var age;
+        pic = photos[sw]
+        gif = gifs[sw]
+        name = names[sw]
+        age = ages[sw]
+        if(sw<9){
+        sw = sw +1
+
+
+        }else{
+          
+          pic = "photos/thankyou.gif"
+          name = ""
+          age = ""
+
+        }
+        document.getElementById('myImage').src = pic;
+        document.getElementById('myBack').src = gif;
+        document.getElementById('name').innerHTML = name;
+        document.getElementById('age').innerHTML = age;
+
+
+     }
+</script>
+<div style="position:absolute;z-index:2;left:450px;top:200px;">
+<img id="myBack" src="photos/gif1.gif"  height="400" width="400"></div>
+<div style="position:absolute;z-index:1;left:450px;top:250px">
+<img id="myImage" src="photos/female18/1.jpg"  height="300" width ="400"></div>
+<br>
+<br>
+<p id ="name">Nuo Chen</p>
+<p id ="age">18</p>
+
+
+
+<div style="position:absolute;z-index:3;left:450px;top:650px;">
+<button  type="button" onclick="photo()"><img src="photos/like.png" height="50" width="50">Like</button></div>
+
+<div style="position:absolute;z-index:3;left:650px;top:650px;">
+<button  type="button" onclick="photo()"><img src="photos/dislike.png" height="55" width="50">Next</button></div>
+
+<div style="position:absolute;z-index:1;right:0px;top:450px">
+<img  src="photos/ad1.gif"   width ="300"></div>
+<div style="position:absolute;z-index:1;left:0px;top:450px">
+<img  src="photos/ad2.gif"   width ="200"></div>
+<div style="position:absolute;z-index:1;right:0px;top:250px">
+<img  src="photos/ad3.gif"   width ="200"></div>
+      </body>
+      </head>
+</html>
